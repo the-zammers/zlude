@@ -31,5 +31,5 @@ We can do so much better than just a plain `Num` class. zlude instead implements
 
 ![The numeric hierarchy, which begins with double branches of Semigroup-Monoid-Group for both Sum and Product, combines at Semiring and Ring, and continues into DivisionRing, EuclideanDomain, and Field.](./docs/numeric_hierarchy.svg)
 
-> ![NOTE]
+> [!NOTE]
 > Base's Data.Monoid defines Sum and Product as "Monoid under addition" and "Monoid under multiplication" respectively, and provide laws for the relationships between `(<>)` and `(+)` and `(*)`. While this relationship should still hold, zlude's Sum and Product are *less strong* definitions that addition and multiplication—though Product's `(<>)` must distribute over Sum's, a type with definitions for both need not have a Semiring instance and the `(+)` and `(*)` included with that.
