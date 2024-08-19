@@ -9,7 +9,6 @@ import GHC.Base (Ordering(..))
 import Data.Group
 import Data.Ring
 import Data.Numbers
-import Data.NumbersTwo
 
 #define TEST(expr) putStr "expr\n> "; print (expr)
 
@@ -29,7 +28,7 @@ main = do
   TEST ((1 + 2 + (3 :: Double)) * 100 / 25)
   putStrLn ""
 
-  putStrLn "Data.NumbersTwo (new number types) examples:"
+  putStrLn "Data.Ring / Data.Numbers (new number types) examples:"
   TEST (Vec2 (12 :: Integer) 100 + Vec2 3 2 * (Vec2 18 7 `div` Vec2 6 6))
   TEST ((Vec3 0 (0 :: Float) 0 - Vec3 99 99 99) / Vec3 3 9 11)
 
