@@ -16,7 +16,7 @@ import GHC.Integer (Integer)
 import GHC.Float (Float, Double)
 import Data.Ratio (Rational)
 import qualified GHC.Num (Num(..))
-import qualified GHC.Real (Fractional(..))
+import qualified GHC.Real (Fractional(..), Integral(..))
 
 import Data.Group
 import Data.Ring
@@ -54,6 +54,11 @@ import Data.Ring
       (/) = (GHC.Real./); \
       recip = GHC.Real.recip };
 
+#define REWRITEINTEGRAL(type) \
+  instance CommutativeRing type; \
+  instance EuclideanDomain type where \
+    { quotRem = GHC.Real.quotRem; };
+
 REWRITENUM(Int)
 REWRITENUM(Word)
 REWRITENUM(Integer)
@@ -63,5 +68,6 @@ REWRITENUM(Rational)
 REWRITEFRACTIONAL(Float)
 REWRITEFRACTIONAL(Double)
 REWRITEFRACTIONAL(Rational)
-
--- instance CommutativeRing Int where
+REWRITEINTEGRAL(Int)
+REWRITEINTEGRAL(Word)
+REWRITEINTEGRAL(Integer)
