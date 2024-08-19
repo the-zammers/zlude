@@ -31,6 +31,7 @@ import GHC.Base (Eq)
 import Text.Show (Show)
 
 import Data.Group
+import Data.Group.Wrappers
 import Data.Ring
 
 --

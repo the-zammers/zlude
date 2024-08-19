@@ -1,33 +1,16 @@
 {-# LANGUAGE NoImplicitPrelude #-}
-{- OPTIONS_GHC -Wno-simplifiable-class-constraints #-}
-{-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 
 module Data.Ring where
 
-import GHC.Base (Eq((==)), Ord((<=)))
-import GHC.Real (Rational())
-import Data.Functor (Functor(..), (<$>))
-import Data.Foldable (Foldable(..))
-import Data.Traversable (Traversable(..))
-import Control.Applicative (Applicative(..))
---import Data.Monoid (Sum(Sum, getSum), Product (Product, getProduct))
+import GHC.Base (Eq((==)), Ord)
+import GHC.Real (Rational()) --relies on base because there's a loop otherwise
 import Data.Group
+import Data.Group.Wrappers
 
 type Num = Ring
 class (Ring a, Ord a) => Real a where toRational :: a -> Rational
 type Fractional a = DivisionRing a
 type Integral a = EuclideanDomain a
-
-newtype Sum a = Sum {getSum :: a} deriving (Eq, Functor, Foldable, Traversable)
-instance Applicative Sum where
-  pure = Sum
-  Sum x <*> Sum y = Sum (x y)
-
-newtype Product a = Product {getProduct :: a} deriving (Eq, Functor, Foldable, Traversable)
-
-instance Applicative Product where
-  pure = Product
-  Product x <*> Product y = Product (x y)
 
 infixl 7 *
 infixl 6 +,-

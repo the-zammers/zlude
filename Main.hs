@@ -7,6 +7,7 @@ import System.IO (IO, print, putStr, putStrLn)
 import Control.Applicative (pure)
 import GHC.Base (Ordering(..))
 import Data.Group
+import Data.Group.Instances
 import Data.Ring
 import Data.Numbers
 
