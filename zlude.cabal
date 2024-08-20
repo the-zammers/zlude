@@ -18,12 +18,11 @@ common warnings
         -Werror=missing-home-modules
         -Widentities
         -Wredundant-constraints
-        -Wmissing-export-lists
 
 library
     import:           warnings
     build-depends:    base ^>=4.17.2.1
-    exposed-modules:  Data.Group, Data.Group.Wrappers, Data.Ring
+    exposed-modules:  Data.Group, Data.Group.Wrappers, Data.Numeric
     default-extensions:
         NoImplicitPrelude LambdaCase ConstraintKinds FlexibleContexts FlexibleInstances
     other-extensions:

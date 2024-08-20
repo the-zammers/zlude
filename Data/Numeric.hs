@@ -2,7 +2,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 
-module Data.Ring (
+module Data.Numeric (
   Semiring(..),
   Ring(..), Num,
   subtract,
