@@ -18,10 +18,10 @@ zlude is explicitly NOT meant to be a general-purpose Prelude replacement. It's 
 
 Right now, you really can't—it doesn't work. However, to get a sense of what it's all about:
 
-1. Clone this repository and poke around a little.
-2. To run the sample code (unit tests to come), run `runghc Main.hs`. This requires GHC to be installed, but Cabal is as of yet not a requirement.
+1. Clone this repository using `git clone` and ensure that GHC and Cabal are both installed.
+2. To run the example code, use `cabal run`. The library should be compiled, as well as an executable called `examples` that will automatically run. To run the executable again, simply invoke `cabal run` once more.
 3. To write a module using zlude, preface your file with `{-# LANGUAGE NoImplicitPrelude #-}` (before the module declaration!) and explicitly state each file you wish to import.
-4. To toy around with zlude in GHCi, call `ghci -XNoImplicitPrelude` and include the zlude files you'd like using `:l` rather than `import`.
+4. To toy around with zlude in GHCi, call `cabal run` and then individually import modules you'd like to work with.
 
 ## Major Changes and Features (more to come!)
 
