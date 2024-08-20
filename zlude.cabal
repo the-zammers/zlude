@@ -22,7 +22,7 @@ common warnings
 library
     import:           warnings
     build-depends:    base ^>=4.17.2.1
-    exposed-modules:  Data.Group, Data.Group.Wrappers, Data.Numeric
+    exposed-modules:  Zlude.Bool, Zlude.Group, Zlude.Group.Wrappers, Zlude.Numeric
     default-extensions:
         NoImplicitPrelude LambdaCase ConstraintKinds FlexibleContexts FlexibleInstances
     other-extensions:

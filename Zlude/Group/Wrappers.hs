@@ -2,7 +2,7 @@
 {-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module Data.Group.Wrappers 
+module Zlude.Group.Wrappers 
     ( Sum (Sum, getSum)
     , Product (Product, getProduct)
     , Endo (Endo, appEndo)
@@ -25,7 +25,7 @@ import Control.Monad (Monad((>>=)))
 import Data.Function (id, (.))
 import Data.Coerce (coerce)
 
-import Data.Group
+import Zlude.Group
 
 newtype Sum a = Sum {getSum :: a} deriving (Eq, Ord, Functor, Foldable, Traversable, Read, Show)
 

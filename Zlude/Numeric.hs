@@ -2,7 +2,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 
-module Data.Numeric (
+module Zlude.Numeric (
   Semiring(..),
   Ring(..), Num,
   subtract,
@@ -39,8 +39,8 @@ import Control.Applicative (Applicative(..))
 import Data.Function (($))
 import Text.Show (Show)
 
-import Data.Group
-import Data.Group.Wrappers
+import Zlude.Group
+import Zlude.Group.Wrappers
 
 --
 

@@ -1,11 +1,11 @@
-module Data.Group (
+module Zlude.Group (
     Semigroup((<>), sconcat, stimes),
     Abelian,
     Monoid(mempty, mappend, mconcat),
     Group(invert, (~~), pow)
   ) where
 
-import GHC.Base (Eq((==)), Ord(compare, (<=), (<)), otherwise, ($), (.), Ordering(LT, EQ, GT), Maybe(Just, Nothing), IO, liftA2, pure, errorWithoutStackTrace)
+import GHC.Base (Eq((==)), Ord(compare, (<=), (<)), ($), (.), Ordering(LT, EQ, GT), Maybe(Just, Nothing), IO, liftA2, pure, errorWithoutStackTrace)
 import qualified GHC.Num (Num(negate))
 import GHC.Real (Integral(quot), even)
 import Data.List.NonEmpty (NonEmpty((:|)))
@@ -14,6 +14,8 @@ import Data.Foldable (foldr)
 import GHC.Num ((-)) --stimes still uses base Integral
 import Data.List (map, (++))
 import Data.Void (Void)
+
+import Zlude.Bool (otherwise)
 
 ---
 
