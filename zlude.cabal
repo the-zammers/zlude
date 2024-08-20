@@ -1,0 +1,44 @@
+cabal-version:      3.0
+name:               zlude
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Z Cater
+-- maintainer:
+-- copyright:
+extra-doc-files:    README.md
+
+common warnings
+    ghc-options:
+        -Wall
+        -Wincomplete-uni-patterns
+        -Wincomplete-record-updates
+        -Werror=missing-home-modules
+        -Widentities
+        -Wredundant-constraints
+        -Wmissing-export-lists
+
+library
+    import:           warnings
+    build-depends:    base ^>=4.17.2.1
+    exposed-modules:  Data.Group, Data.Group.Wrappers, Data.Ring
+    default-extensions:
+        NoImplicitPrelude LambdaCase ConstraintKinds FlexibleContexts FlexibleInstances
+    other-extensions:
+        CPP NoRebindableSyntax DeriveFunctor
+        DeriveFoldable DeriveTraversable
+    default-language: Haskell2010
+
+executable examples
+    import:           warnings
+    build-depends:    base ^>=4.17.2.1
+                    , zlude
+    hs-source-dirs:   examples/
+    main-is:          Main.hs
+    -- other-modules:
+    default-extensions:
+        NoImplicitPrelude
+    default-language: Haskell2010
+

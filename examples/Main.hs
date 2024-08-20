@@ -1,15 +1,11 @@
-{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE CPP #-}
 
-module Main where
+module Main (main) where
 
 import System.IO (IO, print, putStr, putStrLn)
-import Control.Applicative (pure)
 import GHC.Base (Ordering(..))
 import Data.Group
-import Data.Group.Instances
 import Data.Ring
-import Data.Numbers
 
 #define TEST(expr) putStr "expr\n> "; print (expr)
 
