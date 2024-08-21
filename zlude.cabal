@@ -23,7 +23,8 @@ library
     import:           warnings
     build-depends:    base ^>=4.17.2.1
     exposed-modules:  Zlude.Bool, Zlude.Maybe, Zlude.Either,
-                      Zlude.Group, Zlude.Group.Wrappers, Zlude.Numeric
+                      Zlude.Group, Zlude.Group.Wrappers, Zlude.Numeric,
+                      Zlude.Char
     default-extensions:
         NoImplicitPrelude LambdaCase ConstraintKinds FlexibleContexts FlexibleInstances
     other-extensions:
