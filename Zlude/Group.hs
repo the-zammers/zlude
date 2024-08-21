@@ -5,7 +5,7 @@ module Zlude.Group (
     Group(invert, (~~), pow)
   ) where
 
-import GHC.Base (Eq((==)), Ord(compare, (<=), (<)), ($), (.), Ordering(LT, EQ, GT), Maybe(Just, Nothing), IO, liftA2, pure, errorWithoutStackTrace)
+import GHC.Base (Eq((==)), Ord(compare, (<=), (<)), ($), (.), Ordering(LT, EQ, GT), IO, liftA2, pure, errorWithoutStackTrace)
 import qualified GHC.Num (Num(negate))
 import GHC.Real (Integral(quot), even)
 import Data.List.NonEmpty (NonEmpty((:|)))
@@ -16,6 +16,7 @@ import Data.List (map, (++))
 import Data.Void (Void)
 
 import Zlude.Bool (otherwise)
+import Zlude.Maybe (Maybe (Just, Nothing))
 
 ---
 
