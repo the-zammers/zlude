@@ -3,7 +3,7 @@
 module Main (main) where
 
 import System.IO (IO, print, putStr, putStrLn)
-import GHC.Base (Ordering(..))
+import Data.Ord (Ordering(..))
 import Zlude.Group
 import Zlude.Numeric
 
